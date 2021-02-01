@@ -1,4 +1,2 @@
-# Hangman_Justin_Cyphert_CS131-01
+# Hangman_Justin_Cyphert_cs131-01
  
-
-Who know if this will work.....
