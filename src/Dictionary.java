@@ -1,20 +1,23 @@
+/**
+ * This Class has an array to store words that is populated from the text file "words" it stores and array of 200 words and generates a pseudorandom selection of one of the words
+ * 
+ */
+
 import java.util.*;
 import java.io.*;
 
-
-
 public class Dictionary{
-	  
+
 	   String [] words;
 	
 	   int dlength;
-	  
+	
 	  
 	   public Dictionary() throws FileNotFoundException{
 	       words = readFile();
 	   }
 	  
-	   
+
 	   String[] readFile() throws FileNotFoundException{
 	       
 	           
@@ -33,7 +36,7 @@ public class Dictionary{
 	           return words;
 	       
 	   }
-	  
+
 	   
 	   String chooseWord(){
 	      
@@ -44,7 +47,7 @@ public class Dictionary{
 	}
 	
 	
-	
+
 	
 	
 	

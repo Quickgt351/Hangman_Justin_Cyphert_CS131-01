@@ -1,15 +1,35 @@
+
+
+
+
+
 import java.io.IOException;
+/**
+ * 
+ * @author Justin Cyphert
+ * 
+ * CS-131-01 
+ * 
+ * Hangman game
+ *
+ *
+ *
+ *Creates the hangman object loads the win loss file, executes the play Game method and 
+ *writes to the win Loss file
+ *
+ *
+ */
 
 
 public class Application {
    public static void main(String [] args) throws IOException{
-       
+
        Hangman hm = new Hangman();
        
-       hm.loadWL();  //Loads win-loss from winloss.txt
+       hm.loadWL();  
        
-       hm.playGame();//Runs the game
+       hm.playGame();
       
-       hm.writeWL(); //  Writes win-loss to file winloss.txt
+       hm.writeWL(); 
    }
 }

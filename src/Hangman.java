@@ -1,4 +1,6 @@
 
+
+
 import java.util.*;
 import java.io.*;
 
@@ -10,11 +12,17 @@ public class Hangman{
    
    int wins, looses;
   
-   
+   /**
+    * 
+    * @throws FileNotFoundException checks and initializes Dictionary
+    */
    public Hangman() throws FileNotFoundException{
        dict = new Dictionary();      
    }
-  
+  /**
+   * 
+   * @throws  Checks for winloss text file
+   */
    
    public void loadWL() throws FileNotFoundException{
        
@@ -25,7 +33,10 @@ public class Hangman{
            sc.close();
        }
        
-   
+   /**
+    * 
+    * @throws  Checks to see if the file is written to winloss Text field
+    */
   
    
    public void writeWL() throws IOException{
@@ -35,19 +46,23 @@ public class Hangman{
            br.close();
      
    }
-  
-   
+  /**
+   * 
+   * @param Starts a loop until either N is entered when asked the guesscount is 0 or the correct word is guessed
+   */
    public void playGame() throws IOException{
            
                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
                
                while(true){
-                   
+      
                    System.out.print("Do you want to play ? (y / n): ");
                    String ch = br.readLine();
                    if(!ch.equals("y"))
                        break;
-                  
+    /**
+     * Gets a random word from the dictionary, and sets up a new string for the guessed word.  Sets the guess count to 6  
+     */
                    
                    String word = dict.chooseWord();
                    int wl = word.length();
